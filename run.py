@@ -19,7 +19,7 @@ def index():
         session['username'] = request.form['username']
 
     if 'username' in session:
-        return redirect(url_for('user', username=sesion['username']))
+        return redirect(url_for('user', username=session['username']))
 
     return render_template('index.html')
 
